@@ -1,0 +1,386 @@
+/* define the styles for Chatty */
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/poppins.ttf);
+}
+
+@font-face {
+  font-family: Poppins-bold;
+  src: url(./fonts/poppins_bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+:root {
+  --btn-color: #794dfd;
+  --border-radius: 20px;
+}
+
+/* Styles for the main body wrapper */
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+}
+
+/* Styles for the left navbar and its components */
+
+.left-navbar {
+  width: 70px;
+  height: 100%;
+  /* position: fixed;
+  left: 0;
+  top: 0; */
+  background: #131420;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  padding-top: 0px;
+  position: relative;
+  justify-content: space-around;
+}
+
+.left-navbar .logo {
+  position: absolute;
+  top: 10px;
+  color: White;
+  background: var(--btn-color);
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 1.3em;
+}
+
+.left-navbar .navbar-menu {
+  margin: auto 0px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-navbar .navbar-menu i {
+  color: #27272f;
+  color: #828283;
+  margin: 20px;
+}
+
+.left-navbar .power-btn i {
+  color: #828283;
+}
+
+/* End of styles for the left navbar and its components */
+
+main {
+  width: calc(100% - 70px);
+  background: #1b1c2d;
+  position: relative;
+  overflow: scroll;
+}
+
+main header {
+  width: calc(100% - 70px);
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 30px;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  left: 70px;
+  z-index: 1500;
+}
+
+main header .search-component {
+  display: flex;
+}
+
+main header .search-component #searchInput {
+  background: none;
+  color: #fff;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  width: 250px;
+}
+
+main header .header-actions select {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+main header .header-actions .btn-group {
+  padding-left: 20px;
+}
+
+main header .header-actions .btn-group .btn {
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+main header .header-actions {
+  display: flex;
+}
+
+main header .header-actions .btn-group {
+  display: flex;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 0.8em;
+  background: var(--btn-color);
+  border-radius: var(--border-radius);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* styles for the hero section */
+
+h4 {
+  font-weight: lighter;
+  color: #828283;
+  font-size: 0.8em;
+}
+
+main .hero-section {
+  height: 450px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding-left: 70px;
+  background: url(./assets/Снимок.png) no-repeat;
+  /* background: url(./prototype/Главная.png) no-repeat; */
+  background-size: 90%;
+  background-position-y: top;
+  background-position-x: right;
+}
+
+main .hero-section h1 {
+  max-width: 400px;
+}
+
+.btn-section {
+  max-width: 300px;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+main .hero-section h1 b {
+  font-size: 1.5em;
+  font-family: poppins-bold;
+  color: blue;
+}
+
+/* Styles for the trophy section of the main page */
+
+.trophy-section {
+  position: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow-x: scroll;
+  width: calc(100% - 20px);
+  margin: auto;
+  margin-top: -50px;
+  padding: 0;
+  background: #20143a;
+  border-radius: 10px;
+}
+
+.trophy-section .game-status {
+  display: flex;
+  margin-right: 20px;
+}
+
+.trophy-section .game-status .game-name {
+  font-size: 0.7em;
+  font-weight: lighter;
+}
+
+.trophy-section .trophy-container {
+  display: flex;
+  /* margin-right: 50px; */
+}
+
+.trophy-section .trophy-container img {
+  height: 30px;
+  width: 30px;
+}
+
+.trophy-section .trophy-container .trophy-text {
+  /* height: 100%; */
+  width: 50px;
+  text-align: center;
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* flex-direction: column; */
+}
+
+.trophy-section .img-container {
+  background: url(./assets/background.jpg);
+  height: 100%;
+  width: 50px;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.trophy-section .img-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.trophy-section .game-info {
+  margin-left: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trophy-section .game-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.trophy-section .game-details .game-winnings {
+  font-size: 0.7em;
+  font-weight: lighter;
+  margin-right: 10px;
+}
+
+.trophy-section .game-details .game-status {
+  padding: 1px 3px;
+  color: #6bef56;
+  background: rgba(0, 255, 0, 0.3);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+/* End of styles for the trophy section */
+
+/* Styles fpr the main-section of the page */
+
+.main-section {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  margin-top: -15px;
+  flex: 80% 20%;
+}
+
+.game-section-container {
+  flex: 7;
+}
+
+.game-section-container .section-header {
+  display: flex;
+  align-items: center;
+}
+
+.game-section-container .section-header .btn {
+  border-radius: 25px;
+  margin-right: 20px;
+}
+.game-section-container .section-header select {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  margin-right: 20px;
+}
+
+.game-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.game-section .game {
+  /* width: 80px; */
+  overflow: hidden;
+  height: 120px;
+  border-radius: 5px;
+  /* height: 60px; */
+}
+
+.game-section .game img {
+  height: 100%;
+  width: 100%;
+}
+
+.right-panel {
+  border-radius: 20px;
+  padding: 10px 20px;
+  padding-top: 20px;
+  margin-left: 10px;
+  color: #fff;
+  background: #131420;
+  backdrop-filter: blur(20px);
+  flex: 1.8;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.right-panel .game-panel {
+}
+
+.right-panel .game-panel .game-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.right-panel .game-panel .game-list .game-logo {
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.right-panel .game-panel .game-list .game-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.right-panel .game-panel .game-list .btn {
+  height: 0;
+  border-radius: 20px;
+  padding: 15px;
+  margin-left: 5px;
+}
+
+::-webkit-scrollbar {
+  /* height: 0px; */
+  width: 5px;
+}
